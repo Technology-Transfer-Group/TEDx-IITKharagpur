@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    .center-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20vh;
+
+        .title-text {
+            color: #f00;
+            font-size: 7vw;
+        }
+    
+        .coming-soon {
+            color: #fff;
+            font-size: 3vw;
+
+            @media (max-width: 500px) {
+                font-size: 6vw;
+            }
+        }
+
+        .heading-logo {
+            content: url('../assets/tedx_large_heading.svg');
+            width: 60vw;
+            
+            @media (max-width: 500px) {
+                content: url('../assets/tedx_small_heading.svg');
+                // width: 40vw;
+            }
+        }
+    }
+}
