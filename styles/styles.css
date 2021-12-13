@@ -18,7 +18,8 @@ body .center-block {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20vh;
+  height: 100%;
+  width:100%;
 }
 body .center-block .title-text {
   color: #f00;
