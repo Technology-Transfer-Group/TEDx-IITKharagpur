@@ -1,46 +1,62 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   width: 100vw;
   background-color: #000;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
+
 body .center-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 20vh;
 }
+
 body .center-block .title-text {
   color: #f00;
   font-size: 7vw;
 }
+
 body .center-block .coming-soon {
   color: #fff;
   font-size: 3vw;
 }
+
 @media (max-width: 500px) {
   body .center-block .coming-soon {
     font-size: 6vw;
   }
 }
+
 body .center-block .heading-logo {
   content: url("../assets/tedx_large_heading.svg");
   width: 60vw;
 }
+
 @media (max-width: 500px) {
   body .center-block .heading-logo {
     content: url("../assets/tedx_small_heading.svg");
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
