@@ -1,0 +1,106 @@
+.card-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+  }
+  
+ 
+  .events{
+      padding-top:100px;
+      width:100%;
+      overflow:hidden;
+      background-color: black;
+      padding-bottom:100px;
+      
+  }
+
+  .card-carousel .my-card {
+    height: 20rem;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: scale(0.6) translateY(-2rem);
+    transform: scale(0.6) translateY(-2rem);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    
+   
+    background-color: rgba(45, 45, 45, 0.5);
+    transition: 1s;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-right:30px;
+    padding-left:30px;
+   
+  }
+  
+  .card-carousel .my-card:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.3);
+    bottom: -5rem;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+  }
+  
+  .card-carousel .my-card.active {
+    z-index: 3;
+    -webkit-transform: scale(1) translateY(0) translateX(0);
+    transform: scale(1) translateY(0) translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+    background-color: black;
+    box-shadow: 6px 6px 20px rgba(224, 224, 224, 0.25), -6px -6px 20px rgba(224, 224, 224, 0.25);
+  }
+  
+  .card-carousel .my-card.prev, .card-carousel .my-card.next {
+    z-index: 2;
+    -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+    transform: scale(0.8) translateY(-1rem) translateX(0);
+    opacity: 0.6;
+    pointer-events: auto;
+    transition: 1s;
+  }
+  .heading{
+    color:white;
+    font-size:30px;
+    font-weight: bolder;
+  }
+  .body{
+    color:white;
+  
+  }
+  .knowmore{
+background-color: rgba(255, 0, 0, 1);
+width:60%;
+margin-top:10px;
+border-radius: 5px;
+color: white;
+border:1px solid white;
+height:28px;
+  }
+  .color{
+    color:rgba(255, 0, 0, 1);
+  }
+  
+ 
+  @media(max-width:930px)
+  {
+    .card-carousel{
+      display: none;
+    }
+    
+  }
+ 
+  
+  
